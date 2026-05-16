@@ -1,0 +1,19 @@
+{
+  "name": "shopping-server",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "node-fetch": "^3.3.2",
+    "online-shopping-portal": "file:.."
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
