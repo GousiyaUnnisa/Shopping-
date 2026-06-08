@@ -1,4 +1,4 @@
-const API_BASE = import.meta.env.VITE_API_BASE || 'http://localhost:5000';
+const API_BASE = "https://shopping-backend-y7x7.onrender.com";
 
 export async function apiGet(path) {
   const res = await fetch(`${API_BASE}${path}`);
@@ -15,10 +15,11 @@ export async function apiPost(path, body) {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(body)
   });
+
   if (!res.ok) {
     const text = await res.text().catch(() => '');
     throw new Error(`Request failed: ${res.status} ${text}`);
   }
+
   return res.json();
 }
-
